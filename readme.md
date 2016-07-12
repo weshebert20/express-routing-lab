@@ -146,3 +146,9 @@ curl -XGET http://localhost:3000/candies
 - [ExpressJS documentation](http://expressjs.com/4x/api.html)
 - [In-class starter code with solutions branches](https://github.com/sf-wdi-26/candies/tree/master)
 - [More advanced solution](solution-code)
+
+
+
+## Licensing
+All content is licensed under a CC­BY­NC­SA 4.0 license.
+All software code is licensed under GNU GPLv3. For commercial use or alternative licensing, please contact legal@ga.co.

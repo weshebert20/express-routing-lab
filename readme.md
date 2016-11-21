@@ -11,30 +11,29 @@ A kid has come to you with an idea for an API to keep track of his candies.  You
 #### Requirements
 
 - Create an Express app from scratch
-- This app will only respond to JSON; it is just an API, so don't worry about the views
+- Use a local JS `array` of candy `object`s to mimic a database of candies
+- This app will only respond to/with JSON; it is just an API, so don't worry about displaying HTML or files
 - The resource `Candy` should be accessible via the endpoint `/candies` and be RESTful
-- Implement `index`,`show`, `create`, `update`, and `destory` functionality
+- Implement `index`,`show`, `create`, `update`, and `destroy` functionality
 
 **Bonus:**
 - Handle wrong responses with appropriate HTTP status and responses (404, 500, 422)
-- Add some validations for `edit` and `update`
+- Add some validations for `create` and `update` to make sure our candies have a `name` and a `color`
 
+#### Your candy "database"
+
+We will soon create a fully functioning database, but for now we can use our tools from Unit 1 to fake a database.  We will do this by creating a `candies` array, and putting candy objects inside of it. To see how we would build this array, look below at our first expected API response, for `index`.
 
 #### Deliverable
 
-An example app can be found in `solution-code`.
+By the end of the lab, you should have an app with most, or all, of the 5 RESTful routes listed above.
 
-Once you spin up your local server, look below at the cURL commands with the expected responses we want you to test on this app once you've finished building;  the HTTP status should always be 2XX.
+Once you spin up your local server, open up Postman. Look below at the Postman commands, and try to get each of your 5 routes to match the expected responses. The HTTP status should always be 2XX.
 
+`Index` Postman Request
 
-
-
-`Index` cURL Request
-
-```bash
-curl -XGET http://localhost:3000/candies
-
-```
+- Method: GET
+- Endpoint: `http://localhost:3000/candies`
 
   - Expected Response
   ```json
@@ -42,12 +41,10 @@ curl -XGET http://localhost:3000/candies
   ```
 ---
 
-`Show` cURL Request
+`Show` Postman Request
 
-```bash
-curl -XGET http://localhost:3000/candies/3
-
-```
+- Method: GET
+- Endpoint: `http://localhost:3000/candies/3`
 
   - Expected Response
   ```json
@@ -55,12 +52,12 @@ curl -XGET http://localhost:3000/candies/3
   ```
 ---
 
-`Create` cURL Request
+`Create` Postman Request
 
-```bash
-curl -XPOST -H "Content-Type: application/json" -d '{"id": 5, "name":"Jelly Belly","color":"Orange"}' http://localhost:3000/candies
-
-```
+- Method: POST
+- Header: "Content-Type: application/json"
+- Body: `'{"id": 5, "name":"Jelly Belly","color":"Orange"}'`
+- Endpoint: `http://localhost:3000/candies`
 
   - Expected Response
     ```json
@@ -70,11 +67,10 @@ curl -XPOST -H "Content-Type: application/json" -d '{"id": 5, "name":"Jelly Bell
 ---
 
 
-- A second `Index`cURL Request
+- A second `Index` Postman Request
 
-  ```bash
-  curl -XGET http://localhost:3000/candies
-  ```
+- Method: GET
+- Endpoint: `http://localhost:3000/candies`
 
   - Expected Response
 
@@ -88,17 +84,17 @@ curl -XPOST -H "Content-Type: application/json" -d '{"id": 5, "name":"Jelly Bell
 
 `Update` cURL Request
 
-```bash
-curl -XPUT -H "Content-Type: application/json" -d '{"name":"Marshmallows","color":"white"}' http://localhost:3000/candies/3
-```
+- Method: PUT
+- Headers: "Content-Type: application/json"
+- Body: `'{"name":"Marshmallows","color":"white"}'`
+- Endpoint: `http://localhost:3000/candies/3`
 
 ---
 
 Another `Index` Request
 
-```bash
-curl -XGET http://localhost:3000/candies
-```
+- Method: GET
+- Endpoint: `http://localhost:3000/candies`
 
   - Expected Response
 
@@ -106,15 +102,15 @@ curl -XGET http://localhost:3000/candies
 
   [{"id":1,"name":"Chewing Gum","color":"Red"},{"id":2,"name":"Pez","color":"Green"},{"name":"Marshmallows","color":"white"},{"id":4,"name":"Candy Stick","color":"Blue"}]
   ```
-  The record corresponding to the ID passed in the first request has been updated.
+  
+  > Note: The record corresponding to the ID passed in the first request has been updated.
 
 ---
 
-`Update` cURL Request
+`Destroy` Postman Request
 
-```bash
-curl -XDELETE http://localhost:3000/candies/2
-```
+- Method: DELETE
+- Endpoint: `http://localhost:3000/candies/2`
 
   - Expected Response
     ```json
@@ -123,11 +119,10 @@ curl -XDELETE http://localhost:3000/candies/2
 
 ---
 
-`Index` cURL request, again!
+`Index` Postman request, again!
 
-```bash
-curl -XGET http://localhost:3000/candies
-```
+- Method: GET
+- Endpoint: `http://localhost:3000/candies`
 
  - Expected Response
 
@@ -138,16 +133,10 @@ curl -XGET http://localhost:3000/candies
 
 > Note: The record corresponding to the ID passed in the first request has been deleted.
 
-
-
 ## Additional Resources
 
 - [Curl Manual](http://curl.haxx.se/docs/manual.html)
 - [ExpressJS documentation](http://expressjs.com/4x/api.html)
-- [In-class starter code with solutions branches](https://github.com/sf-wdi-26/candies/tree/master)
-- [More advanced solution](solution-code)
-
-
 
 ## Licensing
 All content is licensed under a CC­BY­NC­SA 4.0 license.

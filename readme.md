@@ -10,7 +10,7 @@ A kid has come to you with an idea for an API to keep track of his candies.  You
 
 #### Requirements
 
-- Create an Express app from scratch
+- Create an Express app from minimal starter code
 - Use a local JS `array` of candy `object`s to mimic a database of candies
 - This app will only respond to/with JSON; it is just an API, so don't worry about displaying HTML or files
 - The resource `Candy` should be accessible via the endpoint `/candies` and be RESTful

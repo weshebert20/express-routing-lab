@@ -39,6 +39,7 @@ Once you spin up your local server, open up Postman. Look below at the Postman c
 
   - Expected Response
   `[{"id":1,"name":"Chewing Gum","color":"Red"},{"id":2,"name":"Pez","color":"Green"},{"id":3,"name":"Marshmallow","color":"Pink"},{"id":4,"name":"Candy Stick","color":"Blue"}]`
+
 ---
 
 `Show` Postman Request
@@ -48,6 +49,7 @@ Once you spin up your local server, open up Postman. Look below at the Postman c
 
   - Expected Response
   `{"id":3,"name":"Marshmallow","color":"Pink"}`
+
 ---
 
 `Create` Postman Request

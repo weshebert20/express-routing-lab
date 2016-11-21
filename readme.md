@@ -24,6 +24,8 @@ A kid has come to you with an idea for an API to keep track of his candies.  You
 
 We will soon create a fully functioning database, but for now we can use our tools from Unit 1 to fake a database.  We will do this by creating a `candies` array, and putting candy objects inside of it. To see how we would build this array, look below at our first expected API response, for `index`.
 
+<!-- You should model up through index and create, including creation of the candies database -->
+
 #### Deliverable
 
 By the end of the lab, you should have an app with most, or all, of the 5 RESTful routes listed above.
@@ -36,9 +38,7 @@ Once you spin up your local server, open up Postman. Look below at the Postman c
 - Endpoint: `http://localhost:3000/candies`
 
   - Expected Response
-  ```json
-  [{"id":1,"name":"Chewing Gum","color":"Red"},{"id":2,"name":"Pez","color":"Green"},{"id":3,"name":"Marshmallow","color":"Pink"},{"id":4,"name":"Candy Stick","color":"Blue"}]
-  ```
+  `[{"id":1,"name":"Chewing Gum","color":"Red"},{"id":2,"name":"Pez","color":"Green"},{"id":3,"name":"Marshmallow","color":"Pink"},{"id":4,"name":"Candy Stick","color":"Blue"}]`
 ---
 
 `Show` Postman Request
@@ -47,22 +47,18 @@ Once you spin up your local server, open up Postman. Look below at the Postman c
 - Endpoint: `http://localhost:3000/candies/3`
 
   - Expected Response
-  ```json
-  {"id":3,"name":"Marshmallow","color":"Pink"}
-  ```
+  `{"id":3,"name":"Marshmallow","color":"Pink"}`
 ---
 
 `Create` Postman Request
 
 - Method: POST
 - Header: "Content-Type: application/json"
-- Body: `'{"id": 5, "name":"Jelly Belly","color":"Orange"}'`
+- Body: `{"id": 5, "name":"Jelly Belly","color":"Orange"}`
 - Endpoint: `http://localhost:3000/candies`
 
   - Expected Response
-    ```json
-    {"id":5,"name":"Jelly Belly","color":"Orange"}
-    ```
+    `{"id":5,"name":"Jelly Belly","color":"Orange"}`
 
 ---
 
@@ -74,10 +70,7 @@ Once you spin up your local server, open up Postman. Look below at the Postman c
 
   - Expected Response
 
-  ```json
-
-  [{"id":1,"name":"Chewing Gum","color":"Red"},{"id":2,"name":"Pez","color":"Green"},{"id":3,"name":"Marshmallow","color":"Pink"},{"id":4,"name":"Candy Stick","color":"Blue"},{"id": 5, "name":"Jelly Belly","color":"Orange"}]
-  ```
+  `[{"id":1,"name":"Chewing Gum","color":"Red"},{"id":2,"name":"Pez","color":"Green"},{"id":3,"name":"Marshmallow","color":"Pink"},{"id":4,"name":"Candy Stick","color":"Blue"},{"id": 5, "name":"Jelly Belly","color":"Orange"}]`
   > Note: The new record is sent back !
 
 ---
@@ -86,7 +79,7 @@ Once you spin up your local server, open up Postman. Look below at the Postman c
 
 - Method: PUT
 - Headers: "Content-Type: application/json"
-- Body: `'{"name":"Marshmallows","color":"white"}'`
+- Body: `{"name":"Marshmallows","color":"white"}`
 - Endpoint: `http://localhost:3000/candies/3`
 
 ---
@@ -98,10 +91,7 @@ Another `Index` Request
 
   - Expected Response
 
-  ```json
-
-  [{"id":1,"name":"Chewing Gum","color":"Red"},{"id":2,"name":"Pez","color":"Green"},{"name":"Marshmallows","color":"white"},{"id":4,"name":"Candy Stick","color":"Blue"}]
-  ```
+  `[{"id":1,"name":"Chewing Gum","color":"Red"},{"id":2,"name":"Pez","color":"Green"},{"name":"Marshmallows","color":"white"},{"id":4,"name":"Candy Stick","color":"Blue"}]`
   
   > Note: The record corresponding to the ID passed in the first request has been updated.
 
@@ -113,9 +103,7 @@ Another `Index` Request
 - Endpoint: `http://localhost:3000/candies/2`
 
   - Expected Response
-    ```json
-    {"message":"deleted"}
-    ```
+    `{"message":"deleted"}`
 
 ---
 
@@ -126,10 +114,7 @@ Another `Index` Request
 
  - Expected Response
 
-  ```json
-
-  [{"id":1,"name":"Chewing Gum","color":"Red"},null,{"id":3,"name":"Marshmallow","color":"Pink"},{"id":4,"name":"Candy Stick","color":"Blue"}]
-  ```
+  `[{"id":1,"name":"Chewing Gum","color":"Red"},null,{"id":3,"name":"Marshmallow","color":"Pink"},{"id":4,"name":"Candy Stick","color":"Blue"}]`
 
 > Note: The record corresponding to the ID passed in the first request has been deleted.
 

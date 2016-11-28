@@ -4,7 +4,7 @@
 
 We've now seen how to write an app with Node and Express from scratch, so let's apply this concept again by creating another RESTful API using Express.
 
-A kid has come to you with an idea for an API to keep track of his candies.  You love candies!  So, you accept his proposal. You will create a resource `Candy` and use the kid's candy "data" to populate and post to your database. Check the additional resources at the bottom of this document to get some JSON data to add to your app as well, as well as some cURL examples to make sure your app works as expected!
+A kid has come to you with an idea for an API to keep track of his candies.  You love candies!  So, you accept his proposal. You will create a resource `Candy` and use the kid's candy "data" to populate and post to your database.
 
 ## Exercise
 
@@ -24,13 +24,13 @@ A kid has come to you with an idea for an API to keep track of his candies.  You
 
 We will soon create a fully functioning database, but for now we can use our tools from Unit 1 to fake a database.  We will do this by creating a `candies` array, and putting candy objects inside of it. To see how we would build this array, look below at our first expected API response, for `index`.
 
-<!-- You should model up through index and create, including creation of the candies database -->
+<!-- You should model up through index and create, including creation of the candies database, then briefly talk about rest of steps -->
 
 #### Deliverable
 
 By the end of the lab, you should have an app with most, or all, of the 5 RESTful routes listed above.
 
-Once you spin up your local server, open up Postman. Look below at the Postman commands, and try to get each of your 5 routes to match the expected responses. The HTTP status should always be 2XX.
+Once you spin up your local server, open up Postman. Look below at the Postman commands, and try to get each of your 5 routes to match the expected responses. The HTTP response status should always be 2XX.
 
 `Index` Postman Request
 

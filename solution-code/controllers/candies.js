@@ -43,6 +43,8 @@ router.route('/:id').get(function(req,res){
 router.put('/:id/edit', function(req, res) {
   for(var i in candies){
     if(candies[i]["id"] == req.params.id){
+      var candyEquals = "candyEquals";
+      console.log(candyEquals);
       candies[i] = req.body;
     }
   }

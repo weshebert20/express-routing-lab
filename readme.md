@@ -28,7 +28,7 @@ We will soon create a fully functioning database, but for now we can use our too
 
 #### Deliverable
 
-By the end of the lab, you should have an app with most, or all, of the 5 RESTful routes listed above.
+By the end of the lab, you should have an app with all of the 5 RESTful routes listed above.
 
 Once you spin up your local server, open up Postman. Look below at the Postman commands, and try to get each of your 5 routes to match the expected responses. The HTTP response status should always be 2XX.
 
@@ -65,7 +65,7 @@ Once you spin up your local server, open up Postman. Look below at the Postman c
 ---
 
 
-- A second `Index` Postman Request
+A second `Index` Postman Request
 
 - Method: GET
 - Endpoint: `http://localhost:3000/candies`
@@ -77,7 +77,7 @@ Once you spin up your local server, open up Postman. Look below at the Postman c
 
 ---
 
-`Update` cURL Request
+`Update` Postman Request
 
 - Method: PUT
 - Headers: "Content-Type: application/json"
@@ -86,7 +86,7 @@ Once you spin up your local server, open up Postman. Look below at the Postman c
 
 ---
 
-Another `Index` Request
+Yet Another `Index` Request
 
 - Method: GET
 - Endpoint: `http://localhost:3000/candies`
@@ -109,7 +109,7 @@ Another `Index` Request
 
 ---
 
-`Index` Postman request, again!
+`Index` Postman request, one last time!
 
 - Method: GET
 - Endpoint: `http://localhost:3000/candies`
